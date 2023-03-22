@@ -1,0 +1,28 @@
+header{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.container {
+    border-style: solid;
+    border-radius: 10px;
+    border-color: blue;
+    padding: 25px;
+}
+.social {
+    float: right;
+    margin-top: 5px;
+}
+.logoAr{
+    width: 150px;
+}
+.portada{
+    width: 100%;
+}
+.accordion-item{
+    border-color: pink;
+}
+.accordion-header{
+    border-color: pink;
+}

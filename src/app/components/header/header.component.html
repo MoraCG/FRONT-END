@@ -1,0 +1,43 @@
+    <!--Barra con Iconos-->
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="logoAr navbar-brand" href="#">
+            <img src=".\assets\multimedia\APLogo.png" fill="currentColor" width="130" height="68"/>
+        </a>
+        <div class="social">
+            <a href="https://www.facebook.com/WonderMora/"><img src=".\assets\multimedia\facebook.png" fill="currentColor" width="32" id="facebook" /></a>
+            <a href="https://github.com/MoraCG"><img src=".\assets\multimedia\github.png" fill="currentColor" width="32" id="github" /></a>
+            <a href="https://www.instagram.com/mora2020vision/"><img src=".\assets\multimedia\instagram.png" fill="currentColor" width="32" id="instagram" /></a>
+            <a href="https://www.linkedin.com/in/moracastelligaray/"><img src=".\assets\multimedia\linkedin.png" fill="currentColor" width="32" id="linkedin" /></a>
+            <a href="https://twitter.com/MoraCG23"><img src=".\assets\multimedia\twitter.png" fill="currentColor" width="32" id="twitter" /></a>
+            <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Log In</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Log Out</button>
+        </div>
+    </div>
+</nav>
+
+    <!--Portada desplegable-->
+<div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                Portada
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+                <img class="portada" src=".\assets\multimedia\welcome to.png" fill="currentColor"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--Perfil-->
+<div class="d-flex justify-content-center">
+    <div class="recuadro m-2">
+        <div class="d-flex justify-content-between">
+            <img src=".\assets\multimedia\1655137934413.jfif" alt="imagen de perfil" class="perfil img-fluid" />
+            <h1 class="col-8"><br/>Mora Castelli Garaycochea<h2><br/>Tecnicatura en Desarrollo web</h2></h1>
+        </div>
+    </div>
+</div>
