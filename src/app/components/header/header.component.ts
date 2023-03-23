@@ -20,10 +20,10 @@ export class HeaderComponent implements OnInit {
       this.isLogged=false;
     }
     
-    this.datosPortafolio.obtenerDatos().subscribe(data =>{
-      console.log(data);
-      this.miPortafolio=data;
-    });
+  //  this.datosPortafolio.obtenerDatos().subscribe(data =>{
+  //    console.log(data);
+  //    this.miPortafolio=data;
+  //  });
   }
 
   onLogOut():void{
