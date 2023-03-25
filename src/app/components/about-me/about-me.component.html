@@ -28,6 +28,10 @@
                     Codigo Postal:1414
                 </div>
             </div><br />
+            <div *ngFor="let persona " class="d-flex justify-content-between">
+                <img src={{persona.img}} alt="imagen de perfil" class="perfil img-fluid" />
+                <h1 class="col-8"><br/>{{persona.nombre}} + {{persona.apellido}}<h2><br/>{{persona.titulo}}</h2></h1>
+            </div>
             <a class="btn btn-secondary justify-content-end" data-bs-toggle="collapse" href="#collapseExample1"
                 role="button" aria-expanded="false" aria-controls="collapseExample1">
                 Contactame!

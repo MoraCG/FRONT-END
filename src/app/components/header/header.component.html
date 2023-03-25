@@ -20,12 +20,7 @@
 <div class="accordion" id="accordionPanelsStayOpenExample">
     <div class="accordion-item">
         <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-dark">Editar</button>
-                    <button type="button" class="btn btn-dark">Eliminar</button>
-                </div>
-            </button>
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">CERRAR</button>
         </h2>
         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
             <div class="accordion-body">
@@ -39,9 +34,8 @@
 <div class="d-flex justify-content-center">
     <div class="recuadro m-2">
         <div class="d-flex justify-content-between">
-            <img src=".\assets\multimedia\1655137934413.jfif" alt="imagen de perfil" class="perfil img-fluid" />
-            <h1 class="col-8"><br/>NOMBRE + APELLIDO<h2><br/>TITULO</h2></h1>
-            
+            <img src={{personas.img}} alt="imagen de perfil" class="perfil img-fluid" />
+            <h1 class="col-8"><br/>{{personas.nombre}} + {{personas.apellido}}<h2><br/>{{personas.titulo}}</h2></h1>
         </div>
         <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-dark">Editar</button>

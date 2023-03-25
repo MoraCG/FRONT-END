@@ -1,17 +1,13 @@
-export class persona{
+export class Persona{
     id: number;
-    nombre: String;
-    apellido: String;
-    titulo: String;
-    hobbie: String;
-    img: String;
+    nombre: string;
+    apellido: string;
+    titulo: string;
+    hobbie: string;
+    img: string;
 
 
-    constructor(id: number, nombre: String,
-        apellido: String,
-        titulo: String,
-        hobbie: String,
-        img: String) {
+    constructor(id: number, nombre: string, apellido: string, titulo: string, hobbie: string, img: string) {
 
         this.id = id;
         this.nombre = nombre;

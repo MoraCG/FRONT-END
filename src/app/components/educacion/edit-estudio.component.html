@@ -1,0 +1,30 @@
+
+<div class="container text-center d-flex justify-content-center">
+    <div class="row">
+      <h2>Editar Estudio</h2>
+      <div class="col">
+        <form action="">
+          <div class="row">
+            <div class="form-group">
+              <label for="">Establecimiento:</label>
+              <input [(ngModel)]="estudio.establecimiento" name="establecimiento" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Logro:</label>
+              <input [(ngModel)]="estudio.logro" name="logro" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Fecha:</label>
+              <input [(ngModel)]="estudio.fecha" name="fecha" type="text" class="form-control">
+            </div>
+          </div>
+          <button (click)="Actualizar(estudio)" class="btn btn-danger">Actualizar</button>
+          <button (click)="Cancel()" class="btn btn-secondary">CANCELAR</button>
+        </form>
+      </div>
+    </div>
+  </div>
