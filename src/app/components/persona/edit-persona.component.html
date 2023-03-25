@@ -31,8 +31,9 @@
               </div>
               <div class="row">
                 <div class="form-group">
-                  <label for="">URL de la IMG:</label>
-                  <input [(ngModel)]="persona.img" name="img" type="text" class="form-control">
+                  <label for="">Img:</label>
+                  <input type="file" accept="image/*" alife-file-to-base64 (onFileChanged)="obtener($event)" name="img"
+                    class="form-control">
                 </div>
               </div>
           <button (click)="Actualizar(persona)" class="btn btn-danger">Actualizar</button>

@@ -8,14 +8,16 @@
         <br />
         <!--Skill 1 -->
         <div *ngFor="let skill of skills">
-            <h4 class="header text-center"> {{skill.nombre}} </h4>
+            <picture>
+                <h3>{{skill.nombre}}</h3>
+                <img src="file://{{skill.img}}" alt="Logos de Skills" id="logos" accept="image/*" />
+                
+            </picture>
             <span><p>{{skill.nivel}}</p></span>
             <div class="progress">
                 <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" attr.style="width:{{skill.progress}}%"></div>
             </div>
-            <picture>
-                <img src="{{skill.img}}" alt="Logos de Skills" id="logos" accept="image/*" />
-            </picture>
+            <br /><br />
             <div class="btn-group" role="group" aria-label="Basic example" *ngIf="isAdmin">
                 <button type="button" class="btn btn-dark" (click)="Editar(skill)">
                     <i class="bi bi-pen"></i>Editar</button>

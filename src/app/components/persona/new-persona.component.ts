@@ -17,6 +17,9 @@ export class NewPersonaComponent implements OnInit {
   ngOnInit() {
   }
 
+  obtener(e: any) {
+    this.persona.img = e[0].base64;
+  }
   
   Cancel(){
     this.router.navigate(['cancelar'])

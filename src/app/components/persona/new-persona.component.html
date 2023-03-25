@@ -30,9 +30,10 @@
           </div>
           <div class="row">
             <div class="form-group">
-              <label for="">URL de la IMG:</label>
-              <input [(ngModel)]="persona.img" name="img" type="text" class="form-control">
-            </div>
+              <label for="">Imagen:</label>
+ <!--             <input [(ngModel)]="persona.img" type="file" accept="image/*" alife-file-to-base64 (onFileChanged)="obtener($event)" name="img" class="form-control"> -->
+              <input [(ngModel)]="persona.img" name="img" type="file" alife-file-to-base64 (onFileChanged)="obtener($event)" />
+            </div>    
           </div>
           <span style="margin: 10px;">
             <button (click)="Guardar()" class="btn btn-danger">Guardar</button>

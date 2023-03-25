@@ -5,7 +5,7 @@
         </span>
         <br />
         <div class="d-flex justify-content-between" *ngFor="let persona of personas">
-            <img src={{persona.img}} alt="imagen de perfil" class="perfil img-fluid" />
+            <img src="{{persona.img}}" alt="imagen de perfil" class="perfil img-fluid" id="logos" accept="image/*"/>
             <h1 class="col-8"><br />{{persona.nombre}} {{persona.apellido}}<h2><br />{{persona.titulo}}<h3>Hobbie:{{persona.hobbie}}</h3></h2></h1>
             <div class="btn-group" role="group" aria-label="Basic example" *ngIf="isAdmin">
                 <button type="button" class="btn btn-dark" (click)="Editar(persona)">

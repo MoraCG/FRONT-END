@@ -18,6 +18,10 @@ export class EditPersonaComponent implements OnInit {
     this.Editar();
   }
 
+  obtener(e: any) {
+    this.persona.img = e[0].base64;
+  }
+
   Cancel(){
     this.router.navigate(['home'])
   }
