@@ -13,11 +13,18 @@ export class NewExperienciaComponent implements OnInit {
 
   experiencia:Experiencia=new Experiencia(0,"","","");
 
+  experiencia:Experiencia=new Experiencia(0,"","","");
+
+  constructor(private router:Router, private service:ExperienciaService) { }
   constructor(private router:Router, private service:ExperienciaService) { }
 
   ngOnInit() {
+  ngOnInit() {
   }
 
+  
+  Cancel(){
+    this.router.navigate(['home'])
   
   Cancel(){
     this.router.navigate(['home'])

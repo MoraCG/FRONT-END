@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit{
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){
-      console.log("Hola2");
       this.isLogged = true;
       this.isLogginFail = false;
       this.roles = this.tokenService.getAuthorities();
@@ -38,10 +37,10 @@ export class LoginComponent implements OnInit{
       this.tokenService.setUserName(data.nombreUsuario);
       this.tokenService.setAuthorities(data.authorities);
       this.roles = data.authorities;
-      this.router.navigate([''])
+      this.router.navigate(['logueado'])
     }, err => {
       this.isLogged = false;
-      this.isLogginFail = true;
+//      this.isLogginFail = true;
       this.errMsj = err.error.mensaje;
       console.log(this.errMsj);
     })

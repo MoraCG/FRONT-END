@@ -43,6 +43,8 @@ import { EditExperienciaComponent } from './components/experiencia/edit-experien
   providers: [
     interceptorProvider,
     ExperienciaService
+    interceptorProvider,
+    ExperienciaService
   ],
   bootstrap: [AppComponent]
 })

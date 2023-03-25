@@ -9,6 +9,8 @@ const routes: Routes = [
   {path:'', component: HomeComponent},
   {path:'home', component: HomeComponent},
   {path:'logueado',component:HomeComponent},
+  {path:'home', component: HomeComponent},
+  {path:'logueado',component:HomeComponent},
   {path:'login', component: LoginComponent},
   {path:'addExp',component:NewExperienciaComponent, data: {expectedRol:['admin']}},
   {path:'editExp',component:EditExperienciaComponent, data: {expectedRol:['admin']}}
