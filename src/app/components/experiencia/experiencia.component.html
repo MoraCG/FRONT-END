@@ -1,25 +1,31 @@
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center" id="experiencia">
     <div class="recuadro m-2">
         <h1>Experiencia Laboral</h1>
-        <button type="button" class="btn btn-secondary" data-bs-toggle="button" routerLink="/nuevaexp" *ngIf="isLogged"> + </button>
-        <br />
+        <span class="container d-flex justify-content-between">
+            <button *ngIf="isAdmin" data-bs-toggle="modal" data-bs-target="#exampleModalXp" class="btn btn-outline borrar"><i
+                    class="fas fa-trash"></i></button>
+    
+            <button *ngIf="isAdmin" (click)="Nuevo()" class="btn btn-outline agregar"><i
+                    class="far fa-plus-square"></i></button>
+        </span>
 
         <div>
             <!--Exp.Laboral 1-->
-            <div *ngFor="let Experiencia of expe">
-                <div class="d-flex justify-content-between">
-                    <h2>{{Experiencia.nombre}}</h2>
-                    <p>{{Experiencia.fecha}}</p>
+            <div *ngFor="let experiencia of experiencias">
+                <div class="d-flex justify-content-between" >
+                    <h2>{{experiencia.nombre}}</h2>
+                    <p>{{experiencia.puesto}}</p>
+                    <p>{{experiencia.fecha}}</p>
                 </div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-dark">Editar</button>
-                    <button type="button" class="btn btn-dark">Eliminar</button>
+                <div class="btn-group" role="group" aria-label="Basic example" >
+                    <button type="button" class="btn btn-dark" *ngIf="isAdmin" (click)="Editar(experiencia)"
+                    class="btn editar"><i class="fas fa-hammer"></i></button>
                 </div>
-                <div class="d-flex">
-                    <p class="m-1">
-                        {{Experiencia.puesto}}
-                    </p>
-                </div><br /><br />
+                <div class="btn-group" role="group" aria-label="Basic example" *ngIf="isAdmin">
+                    <button type="button" class="btn btn-dark" >
+                        <i class="bi bi-trash-fill"></i>Eliminar</button>
+                </div>
+                <br /><br />
             </div>
         </div>
     </div>
