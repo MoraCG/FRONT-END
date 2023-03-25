@@ -1,0 +1,24 @@
+
+<div class="container text-center d-flex justify-content-center">
+    <div class="row">
+      <h2>Editar Proyecto</h2>
+      <div class="col">
+        <form action="">
+          <div class="row"><div class="form-group">
+            <label for="">Nombre:</label>
+            <input [(ngModel)]="proyecto.nombre" name="nombre" type="text" class="form-control">
+          </div></div>
+          <div class="row"><div class="form-group">
+            <label for="">Desempenio:</label>
+            <input [(ngModel)]="proyecto.desempenio" name="desempenio" type="text" class="form-control">
+          </div></div>
+          <div class="row"><div class="form-group">
+            <label for="">Url:</label>
+            <input [(ngModel)]="proyecto.url" name="url" type="text" class="form-control">
+          </div></div>
+          <button (click)="Actualizar(proyecto)" class="btn btn-danger">Actualizar</button>
+          <button (click)="Cancel()" class="btn btn-secondary">CANCELAR</button>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,13 +1,13 @@
 export class Proyecto{
     id:number;
-    nombre:String;
-    desempenio:String;
-    url:String;
+    nombre:string;
+    desempenio:string;
+    url:string;
 
 
-constructor(id:number,nombre:String,
-    desempenio:String,
-    url:String)
+constructor(id:number,nombre:string,
+    desempenio:string,
+    url:string)
     {
 
     this.id= id;

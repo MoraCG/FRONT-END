@@ -1,0 +1,36 @@
+<div class="container text-center d-flex justify-content-center">
+    <div class="row">
+      <h2>Editar Skill</h2>
+      <div class="col">
+        <form action="">
+          <div class="row">
+            <div class="form-group">
+              <label for="">Nombre:</label>
+              <input [(ngModel)]="skill.nombre" name="nombre" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Progress:</label>
+              <input [(ngModel)]="skill.progress" name="progress" type="number" class="form-control" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Img:</label>
+              <input type="file" accept="image/*" alife-file-to-base64 (onFileChanged)="obtener($event)" name="img"
+                class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Nivel:</label>
+              <input [(ngModel)]="skill.nivel" name="nivel" type="text" class="form-control" />
+            </div>
+          </div>
+          <button (click)="Actualizar(skill)" class="btn btn-danger">Actualizar</button>
+          <button (click)="Cancel()" class="btn btn-secondary">CANCELAR</button>
+        </form>
+      </div>
+    </div>
+  </div>

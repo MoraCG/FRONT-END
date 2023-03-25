@@ -1,0 +1,43 @@
+
+<div class="container text-center d-flex justify-content-center">
+    <div class="row">
+      <h2>Editar Proyecto</h2>
+      <div class="col">
+        <form action="">
+            <div class="row">
+                <h1>Editar Persona Perfil</h1> 
+                <div class="form-group">
+                  <label for="">Nombres:</label>
+                  <input [(ngModel)]="persona.nombre" name="nombre" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <label for="">Apellido:</label>
+                  <input [(ngModel)]="persona.apellido" name="apellido" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <label for="">Titulo:</label>
+                  <input [(ngModel)]="persona.titulo" name="titulo" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <label for="">Hobbie:</label>
+                  <input [(ngModel)]="persona.hobbie" name="hobbie" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <label for="">URL de la IMG:</label>
+                  <input [(ngModel)]="persona.img" name="img" type="text" class="form-control">
+                </div>
+              </div>
+          <button (click)="Actualizar(persona)" class="btn btn-danger">Actualizar</button>
+          <button (click)="Cancel()" class="btn btn-secondary">CANCELAR</button>
+        </form>
+      </div>
+    </div>
+  </div>

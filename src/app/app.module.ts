@@ -20,6 +20,16 @@ import { EditExperienciaComponent } from './components/experiencia/edit-experien
 import { NewEstudioComponent } from './components/educacion/new-estudio.component';
 import { EditEstudioComponent } from './components/educacion/edit-estudio.component';
 import { EducacionService } from './service/educacion.service';
+import { NewProyectoComponent } from './components/proyectos/new-proyecto.component';
+import { EditProyectoComponent } from './components/proyectos/edit-proyecto.component';
+import { ProyectoService } from './service/proyecto.service';
+import { PersonaComponent } from './components/persona/persona.component';
+import { PersonaService } from './service/persona.service';
+import { EditPersonaComponent } from './components/persona/edit-persona.component';
+import { NewPersonaComponent } from './components/persona/new-persona.component';
+import { NewSkillComponent } from './components/skills/new-skill.component';
+import { EditSkillComponent } from './components/skills/edit-skill.component';
+import { SkillService } from './service/skill.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +46,14 @@ import { EducacionService } from './service/educacion.service';
     NewExperienciaComponent,
     EditExperienciaComponent,
     NewEstudioComponent,
-    EditEstudioComponent
+    EditEstudioComponent,
+    NewProyectoComponent,
+    EditProyectoComponent,
+    PersonaComponent,
+    EditPersonaComponent,
+    NewPersonaComponent,
+    NewSkillComponent,
+    EditSkillComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +65,10 @@ import { EducacionService } from './service/educacion.service';
   providers: [
     interceptorProvider,
     ExperienciaService,
-    EducacionService
+    EducacionService,
+    ProyectoService,
+    PersonaService,
+    SkillService
   ],
   bootstrap: [AppComponent]
 })

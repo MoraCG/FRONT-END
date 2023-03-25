@@ -1,28 +1,34 @@
-<div class="d-flex justify-content-around">
+<div class="d-flex justify-content-around" id="proyecto">
     <div class="recuadro m-2">
         <h2> Proyectos en los que participe:</h2>
+        <span class="container d-flex justify-content-between">
+            <button *ngIf="isAdmin" (click)="Nuevo()"  type="button" class="btn btn-outline agregar btn-dark"><i class="bi bi-plus-square"></i></button>
+        </span>
         <br />
         <div class="container">
             <div class="row justify-content-around">
                 <!-- Proyecto -->
                 <div class="col-4">
-                    <div class="">
-                        <img src=".\assets\multimedia\proyecto.jpg" alt="imagen de proyecto" class="img-thumbnail" />
-                        <p>
-                            NOMBRE
-                        </p>
+                    <div class="" *ngFor="let proyecto of proyectos">
+                        <!--<img src="{{proyecto.url}}" alt="imagen de proyecto" class="img-thumbnail" />-->
+                        <p>{{proyecto.nombre}}</p>
+
                         <!-- Leer más -->
                         <div>
                             <div class="collapse" id="collapseExample">
                                 <div class="card-body">
-                                    DESEMPENIO
+                                    {{proyecto.desempenio}}
                                     <br />
                                     <br />
                                 </div>
                             </div>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-dark">Editar</button>
-                                <button type="button" class="btn btn-dark">Eliminar</button>
+                            <div class="btn-group" role="group" aria-label="Basic example" *ngIf="isAdmin">
+                                <button type="button" class="btn btn-dark" (click)="Editar(proyecto)">
+                                    <i class="bi bi-pen"></i>Editar</button>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example" *ngIf="isAdmin">
+                                <button type="button" class="btn btn-dark" (click)="Delete(proyecto)">
+                                    <i class="bi bi-trash-fill"></i>Eliminar</button>
                             </div>
                         </div>
                     </div>
