@@ -1,12 +1,18 @@
-export class Proyecto {
-    id?: number;
-    nombre: string;
-    url: string;
-    desempenio: string;
+export class Proyecto{
+    id:number;
+    nombre:String;
+    desempenio:String;
+    url:String;
 
-    constructor(nombre: string, url: string, desempenio: string){
-        this.nombre = nombre;
-        this.url = url;
-        this.desempenio = desempenio;
-    }
+
+constructor(id:number,nombre:String,
+    desempenio:String,
+    url:String)
+    {
+
+    this.id= id;
+    this.nombre=nombre;
+    this.desempenio=desempenio;
+    this.url=url;
+}
 }

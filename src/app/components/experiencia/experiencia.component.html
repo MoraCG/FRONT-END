@@ -1,25 +1,26 @@
 <div class="d-flex justify-content-center">
     <div class="recuadro m-2">
         <h1>Experiencia Laboral</h1>
-        <button type="button" class="btn btn-secondary" data-bs-toggle="button" routerLink="/nuevaexp" *ngIf="isLogged"> + </button>
-        <br />
+        <span class="container d-flex justify-content-between">
+            <button *ngIf="isAdmin" (click)="Nuevo()"  type="button" class="btn btn-outline agregar btn-dark"><i class="bi bi-plus-square"></i></button>
+        </span>
 
         <div>
             <!--Exp.Laboral 1-->
-            <div *ngFor="let Experiencia of expe">
+            <div *ngFor="let experiencia of experiencias">
                 <div class="d-flex justify-content-between">
-                    <h2>{{Experiencia.nombre}}</h2>
-                    <p>{{Experiencia.fecha}}</p>
+                    <h2>{{experiencia.nombre}}</h2>
+                    <p>{{experiencia.fecha}}</p>
                 </div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-dark">Editar</button>
-                    <button type="button" class="btn btn-dark">Eliminar</button>
+                <div class="btn-group" role="group" aria-label="Basic example" *ngIf="isAdmin">
+                    <button type="button" class="btn btn-dark" (click)="Editar(experiencia)">
+                        <i class="bi bi-pen"></i>Editar</button>
                 </div>
-                <div class="d-flex">
-                    <p class="m-1">
-                        {{Experiencia.puesto}}
-                    </p>
-                </div><br /><br />
+                <div class="btn-group" role="group" aria-label="Basic example" *ngIf="isAdmin">
+                    <button type="button" class="btn btn-dark" (click)="Delete(experiencia)">
+                        <i class="bi bi-trash-fill"></i>Eliminar</button>
+                </div>
+                <br /><br />
             </div>
         </div>
     </div>

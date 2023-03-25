@@ -1,39 +1,29 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Proyecto } from '../model/proyecto';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ExperienciaService {
-//<<<<<<< HEAD
-//  expURL = 'https://backend-mgb.herokuapp.com/explab/';
-//=======
-//  URL = environment.URL + 'explab/';
-//>>>>>>> dbccedd5c18384aa757cbb7ab7d9f7f3bc0e7672
+export class ProyectoService {
 
-  URL = 'http://localhost:8080/proyectos/'
+  constructor(private http:HttpClient) {}
 
-  constructor(private httpClient: HttpClient) { }
+  URL = 'http://localhost:8080/proyectos'
 
-  public lista(): Observable<Proyecto[]>{
-    return this.httpClient.get<Proyecto[]>(this.URL + 'traer');
-  }
-
-  public detail(id: number): Observable<Proyecto>{
-    return this.httpClient.get<Proyecto>(this.URL + `${id}`);
-  } 
-
-  public save(experiencia: Proyecto): Observable<any>{
-    return this.httpClient.post<any>(this.URL + 'crear', experiencia);
-  }
-
-  public update(id: number, experiencia: Proyecto): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `editar/${id}`, experiencia);
-  }
-
-  public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.URL + `borrar/${id}`);
-  }
+  getProyecto(){
+    return this.http.get<Proyecto[]>(this.URL+'/traer');
+}
+createProyecto(proyecto:Proyecto){
+  return this.http.post<Proyecto>(this.URL+'/crear',proyecto);
+}
+getProyectoId(id:number){
+  return this.http.get<Proyecto>(this.URL+"/"+id);
+}
+updateProyecto(proyecto:Proyecto){
+  return this.http.put<Proyecto>(this.URL+"/editar/"+proyecto.id,proyecto);
+}
+deleteProyecto(proyecto:Proyecto){
+  return this.http.delete<Proyecto>(this.URL+"/borrar/"+proyecto.id);
+}
 }
