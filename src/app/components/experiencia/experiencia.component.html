@@ -1,8 +1,13 @@
 <div class="d-flex justify-content-center" id="experiencia">
     <div class="recuadro m-2">
         <h1>Experiencia Laboral</h1>
-        <button *ngIf="isAdmin" (click)="Nuevo()" type="button" class="btn btn-secondary agregar" data-bs-toggle="button" routerLink="/addExp" > + </button>
-        <br />
+        <span class="container d-flex justify-content-between">
+            <button *ngIf="isAdmin" data-bs-toggle="modal" data-bs-target="#exampleModalXp" class="btn btn-outline borrar"><i
+                    class="fas fa-trash"></i></button>
+    
+            <button *ngIf="isAdmin" (click)="Nuevo()" class="btn btn-outline agregar"><i
+                    class="far fa-plus-square"></i></button>
+        </span>
 
         <div>
             <!--Exp.Laboral 1-->
