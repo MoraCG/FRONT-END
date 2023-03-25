@@ -1,23 +1,33 @@
-<div class="container">
+
+
+<div class="container text-center d-flex justify-content-center">
     <div class="row">
-        <div>
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombre">Nombre de la empresa</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="puesto">Puesto</label>
-                    <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="puesto" required>
-                </div>
-                <div class="form-group">
-                    <label for="fecha">fecha</label>
-                    <input type="text" class="form-control" id="fecha" name="fecha" [(ngModel)]="fecha" required>
-                </div>
-                <button class="btn btn-primary">
-                    Agregar experiencia
-                </button>
-            </form>
-        </div>
+      <div class="col">
+        <h3>Agregar Experiencia</h3>
+        <form action="">
+          <div class="row">
+            <div class="form-group">
+              <label for="">Nombre:</label>
+              <input [(ngModel)]="experiencia.nombre" name="nombre" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Puesto:</label>
+              <input [(ngModel)]="experiencia.puesto" name="puesto" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Fecha:</label>
+              <input [(ngModel)]="experiencia.fecha" name="fecha" type="text" class="form-control">
+            </div>
+          </div>
+          <span style="margin: 10px;">
+            <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
+            <button (click)="Cancel()" class="btn btn-secondary">Cancelar</button>
+          </span>
+        </form>
+      </div>
     </div>
-</div>
+  </div>

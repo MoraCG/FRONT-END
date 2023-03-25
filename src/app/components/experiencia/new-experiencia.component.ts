@@ -10,26 +10,22 @@ import { Experiencia } from 'src/app/model/experiencia';
   styleUrls: ['./new-experiencia.component.css']
 })
 export class NewExperienciaComponent implements OnInit {
-  nombre: string = '';
-  puesto: string = '';
-  fecha: string = '';
 
-  constructor(private experiencia: ExperienciaService, private router: Router) { }
+  experiencia:Experiencia=new Experiencia(0,"","","");
 
-  ngOnInit(): void {
+  constructor(private router:Router, private service:ExperienciaService) { }
+
+  ngOnInit() {
   }
 
-  onCreate(): void {
-    const expe = new Experiencia(this.nombre, this.puesto, this.fecha);
-    this.experiencia.save(expe).subscribe(
-      data => {
-        alert("Experiencia añadida");
-        this.router.navigate(['']);
-      }, err => {
-        alert("Falló");
-        this.router.navigate(['']);
-      }
-    )
+  
+  Cancel(){
+    this.router.navigate(['home'])
   }
 
+  Guardar(){
+    this.service.createExperiencia(this.experiencia).subscribe(data=> {alert("Se Agrego con Exito...!!!");
+      this.router.navigate(['home']);
+    })
+  }
 }

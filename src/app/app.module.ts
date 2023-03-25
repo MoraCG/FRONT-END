@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { interceptorProvider } from './service/interceptor-service';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { ExperienciaService } from './service/experiencia.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
     ReactiveFormsModule
   ],
   providers: [
-    interceptorProvider
+    interceptorProvider,
+    ExperienciaService
   ],
   bootstrap: [AppComponent]
 })
