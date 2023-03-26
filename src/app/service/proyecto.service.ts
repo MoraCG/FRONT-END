@@ -9,7 +9,7 @@ export class ProyectoService {
 
   constructor(private http:HttpClient) {}
 
-  URL = 'http://localhost:8080/proyectos'
+  URL = 'http://back-end-production-602a.up.railway.app/proyectos'
 
   getProyecto(){
     return this.http.get<Proyecto[]>(this.URL+'/traer');

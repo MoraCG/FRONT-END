@@ -11,7 +11,7 @@ export class PersonaService {
 
   constructor(private http: HttpClient) { }
 
-  URL = 'http://localhost:8080/personas';
+  URL = 'http://back-end-production-602a.up.railway.app/personas';
 
   getPersona() {
     return this.http.get<Persona[]>(this.URL + '/traer');
